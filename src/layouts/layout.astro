@@ -1,0 +1,26 @@
+---
+        import Footer from '../components/Footer.astro'
+        import '../style/layout.css'
+    interface Props {
+        title?: String;
+    }
+    const {title = "My Sitio"} = Astro.props;
+    
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astro bulding example | {title} </title>
+</head>
+<body>
+    <main class="mx-auto container pt-10">        
+        <slot/>
+    </main>
+    <Footer></Footer>
+    
+</body>
+</html>

@@ -1,0 +1,22 @@
+---
+import projects from "../../config/projects.json";
+---
+
+<h2 class="font-bold text-5xl my-5 text-center">Projects</h2>
+
+{
+  projects.map((project) => (
+    <div class="flex">
+      <div class="flex-1">
+        <h2 class="font-bold text-3xl p-5 text-center">{project.title}</h2>
+        <p class="text-justify my-2">{project.description}</p>
+        <button class="bg-indigo-500 py-3 px-2 hover:bg-indigo-400 rounded-xl">
+            More info...
+        </button>
+      </div>
+      <div class="flex-1">
+        <img src={project.image} alt="Logo imagen" class="w-60 py-4" />
+      </div>
+    </div>
+  ))
+}
